@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tin tức – Sự kiện – Trường Cao đẳng Bắc Giang</title>
+  <meta name="description" content="Tin tức tuyển sinh, đào tạo, hoạt động sinh viên và việc làm của Trường Cao đẳng Bắc Giang.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="news">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="index.html">Trang chủ</a></li><li aria-current="page">Tin tức</li></ol>
+        <h1>Tin tức &amp; sự kiện</h1>
+        <p>Cập nhật hoạt động tuyển sinh, đào tạo, hợp tác doanh nghiệp và đời sống sinh viên.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container layout-sidebar">
+        <div>
+          <div class="chips mb-4" id="news-chips" role="group" aria-label="Lọc theo chuyên mục"></div>
+          <div class="grid grid-2" id="news-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))"></div>
+          <nav class="pagination" aria-label="Phân trang"><span class="is-current" aria-current="page">1</span><a href="#">2</a><a href="#">3</a><a href="#" aria-label="Trang sau">›</a></nav>
+        </div>
+        <aside>
+          <div class="panel">
+            <h3>Tìm kiếm</h3>
+            <form class="newsletter" role="search" style="margin:0" onsubmit="event.preventDefault()"><label class="sr-only" for="news-q">Tìm tin tức</label><input id="news-q" class="input" style="border-radius:999px;background:#fff;color:inherit;border-color:var(--c-ink-300)" placeholder="Nhập từ khoá…"><button class="btn btn--secondary btn--sm" type="submit">Tìm</button></form>
+          </div>
+          <div class="panel">
+            <h3>Đọc nhiều nhất</h3>
+            <div class="news-list" id="news-popular"></div>
+          </div>
+          <div class="panel panel--accent">
+            <h3>Nhận tin tuyển sinh</h3>
+            <p>Đăng ký email để nhận thông báo tuyển sinh, học bổng và việc làm mới nhất.</p>
+            <form class="newsletter" data-newsletter><label class="sr-only" for="nl2">Email</label><input id="nl2" type="email" placeholder="Email của bạn" required><button class="btn btn--primary btn--sm" type="submit">Gửi</button></form>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

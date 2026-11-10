@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Việc làm cho sinh viên – Trường Cao đẳng Bắc Giang</title>
+  <meta name="description" content="Cổng việc làm của Trường Cao đẳng Bắc Giang: tin tuyển dụng từ doanh nghiệp đối tác, thực tập có lương, việc làm trong và ngoài nước.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="jobs">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero" style="padding-bottom:72px">
+      <div class="container">
+        <ol class="breadcrumb"><li><a href="index.html">Trang chủ</a></li><li aria-current="page">Việc làm</li></ol>
+        <h1>Cổng việc làm sinh viên</h1>
+        <p>Tin tuyển dụng được Phòng Quan hệ doanh nghiệp xác thực. Ứng tuyển trực tiếp, nhà trường hỗ trợ hồ sơ và phỏng vấn.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="search-bar" id="job-search" role="search" aria-label="Tìm việc làm" style="grid-template-columns:1fr">
+        <div class="form-row" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px">
+          <div class="field"><i data-icon="search"></i><label class="sr-only" for="job-q">Từ khoá</label><input id="job-q" type="search" placeholder="Tên vị trí, công ty…"></div>
+          <div class="field"><i data-icon="pin"></i><label class="sr-only" for="job-loc">Địa điểm</label>
+            <select id="job-loc"><option value="">Mọi địa điểm</option><option>TP. Bắc Giang</option><option>Việt Yên</option><option>Lạng Giang</option><option>Lục Ngạn</option><option>Nhật Bản</option></select></div>
+        </div>
+      </form>
+    </div>
+
+    <section class="section">
+      <div class="container layout-sidebar layout-sidebar--left">
+        <aside>
+          <button class="btn btn--outline btn--block filters-toggle mb-2" type="button" aria-expanded="false" aria-controls="job-filters"><i data-icon="filter"></i> Bộ lọc</button>
+          <form class="panel filters sticky" id="job-filters" data-collapsed="true" aria-label="Bộ lọc việc làm">
+            <div class="filter-group">
+              <label class="check"><input type="checkbox" id="only-saved"> <b>Chỉ hiện việc đã lưu</b></label>
+            </div>
+            <div class="filter-group">
+              <h4>Hình thức</h4>
+              <label class="check"><input type="checkbox" name="type" value="Toàn thời gian"> Toàn thời gian</label>
+              <label class="check"><input type="checkbox" name="type" value="Bán thời gian"> Bán thời gian</label>
+              <label class="check"><input type="checkbox" name="type" value="Thực tập"> Thực tập</label>
+              <label class="check"><input type="checkbox" name="type" value="Thời vụ"> Thời vụ</label>
+            </div>
+            <div class="filter-group">
+              <h4>Mức lương tối thiểu</h4>
+              <label class="check"><input type="radio" name="salary" value="0" checked> Tất cả</label>
+              <label class="check"><input type="radio" name="salary" value="8"> Từ 8 triệu</label>
+              <label class="check"><input type="radio" name="salary" value="10"> Từ 10 triệu</label>
+              <label class="check"><input type="radio" name="salary" value="15"> Từ 15 triệu</label>
+            </div>
+            <div class="filter-group">
+              <h4>Ngành nghề</h4>
+              <div id="filter-field"></div>
+            </div>
+            <button class="btn btn--outline btn--sm btn--block" type="button" data-reset>Xoá bộ lọc</button>
+          </form>
+        </aside>
+
+        <div>
+          <div class="results-bar">
+            <p class="mb-0"><b id="job-count">0</b> việc làm phù hợp</p>
+            <label class="flex items-center" style="gap:8px"><span class="text-muted">Sắp xếp</span>
+              <select class="select" id="job-sort"><option value="new">Mới nhất</option><option value="hot">Tuyển gấp</option><option value="salary">Lương cao nhất</option></select></label>
+          </div>
+          <div class="grid" id="job-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="nha-tuyen-dung">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Dành cho doanh nghiệp</span>
+          <h2>Tuyển dụng sinh viên Cao đẳng Bắc Giang</h2>
+          <p class="text-muted">Đăng tin miễn phí, tiếp cận hơn 4.800 sinh viên và 35.000 cựu sinh viên. Nhà trường hỗ trợ tổ chức phỏng vấn tại trường và đào tạo theo đơn đặt hàng.</p>
+          <ul class="checklist">
+            <li>Đăng tin tuyển dụng miễn phí, duyệt trong 24 giờ</li>
+            <li>Giới thiệu ứng viên phù hợp theo yêu cầu</li>
+            <li>Tổ chức ngày hội tuyển dụng tại trường</li>
+            <li>Đào tạo, bồi dưỡng nâng cao tay nghề cho người lao động</li>
+          </ul>
+        </div>
+        <div class="panel panel--lg">
+          <h3>Gửi yêu cầu tuyển dụng</h3>
+          <div class="alert alert--success mb-2" hidden><i data-icon="check"></i><span>Đã nhận yêu cầu. Chúng tôi sẽ liên hệ trong 1 ngày làm việc.</span></div>
+          <form class="form" id="employer-form">
+            <div class="form-group"><label for="e-company">Tên doanh nghiệp <span class="req">*</span></label><input class="input" id="e-company" required autocomplete="organization"><span class="form-error">Vui lòng nhập tên doanh nghiệp</span></div>
+            <div class="form-row">
+              <div class="form-group"><label for="e-contact">Người liên hệ <span class="req">*</span></label><input class="input" id="e-contact" required autocomplete="name"><span class="form-error">Vui lòng nhập người liên hệ</span></div>
+              <div class="form-group"><label for="e-phone">Điện thoại <span class="req">*</span></label><input class="input" id="e-phone" type="tel" required autocomplete="tel"><span class="form-error">Vui lòng nhập số điện thoại</span></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="e-pos">Vị trí cần tuyển</label><input class="input" id="e-pos" placeholder="VD: Kỹ thuật viên điện"></div>
+              <div class="form-group"><label for="e-qty">Số lượng</label><input class="input" id="e-qty" type="number" min="1" placeholder="10"></div>
+            </div>
+            <div class="form-group"><label for="e-desc">Mô tả yêu cầu</label><textarea class="textarea" id="e-desc"></textarea></div>
+            <div><button class="btn btn--secondary" type="submit">Gửi yêu cầu</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
